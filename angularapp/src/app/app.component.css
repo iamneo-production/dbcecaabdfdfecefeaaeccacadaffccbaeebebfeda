@@ -1,0 +1,12 @@
+#headerContainer {
+    padding-top: 1px;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    text-align: left;
+    background: #ee7708;
+    color: white;
+  }
+  p {
+    padding-top: 6px;
+  }
+  

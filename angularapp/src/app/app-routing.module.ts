@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { CaloryTrackerComponent } from './calory-tracker/calory-tracker.component';
+import { SampleComponent } from './sample/sample.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'sample',
+    component: SampleComponent,
+  },
+  {
+    path: 'calory-tracker',
+    component: CaloryTrackerComponent,
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
