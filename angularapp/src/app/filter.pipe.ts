@@ -1,24 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter'
+  name: 'filter',
 })
 export class FilterPipe implements PipeTransform {
-
-  transform(value: any,filter:string){
-    if(filter == '')
-    return value;
-
+  transform(value: any, term: string) {
+    if (value.length == 0 || term == ' ' || term == '') return value;
     const foods = [];
-    for(let v of value)
-    {
-      if(v.name.includes(filter))
-      {
-        foods.push(v);
-      }
-    }
-
+    for (const food of value) if (food['name'] == term) foods.push(food);
     return foods;
   }
-
 }
